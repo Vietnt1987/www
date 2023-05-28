@@ -1,0 +1,98 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = resnet 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 6 key-value pairs.
+Below are 6 of them:
+ 1 key:            fox_squirrel_01.jpg  label:               fox squirrel
+ 2 key:       Boston_terrier_02285.jpg  label:             boston terrier
+ 3 key:                     Dog_02.png  label:                        dog
+ 4 key:                     Dog_01.png  label:                        dog
+ 5 key:            Dalmatian_04017.jpg  label:                  dalmatian
+ 6 key:                  skunk_029.jpg  label:                      skunk
+{'fox_squirrel_01.jpg': ['fox squirrel', 'fox squirrel, eastern fox squirrel, sciurus niger', 1], 'Boston_terrier_02285.jpg': ['boston terrier'], 'Dog_02.png': ['dog'], 'Dog_01.png': ['dog'], 'Dalmatian_04017.jpg': ['dalmatian'], 'skunk_029.jpg': ['skunk']}
+{'fox_squirrel_01.jpg': ['fox squirrel', 'fox squirrel, eastern fox squirrel, sciurus niger', 1], 'Boston_terrier_02285.jpg': ['boston terrier', 'boston bull, boston terrier', 1], 'Dog_02.png': ['dog'], 'Dog_01.png': ['dog'], 'Dalmatian_04017.jpg': ['dalmatian'], 'skunk_029.jpg': ['skunk']}
+{'fox_squirrel_01.jpg': ['fox squirrel', 'fox squirrel, eastern fox squirrel, sciurus niger', 1], 'Boston_terrier_02285.jpg': ['boston terrier', 'boston bull, boston terrier', 1], 'Dog_02.png': ['dog', 'golden retriever', 0], 'Dog_01.png': ['dog'], 'Dalmatian_04017.jpg': ['dalmatian'], 'skunk_029.jpg': ['skunk']}
+{'fox_squirrel_01.jpg': ['fox squirrel', 'fox squirrel, eastern fox squirrel, sciurus niger', 1], 'Boston_terrier_02285.jpg': ['boston terrier', 'boston bull, boston terrier', 1], 'Dog_02.png': ['dog', 'golden retriever', 0], 'Dog_01.png': ['dog', 'golden retriever', 0], 'Dalmatian_04017.jpg': ['dalmatian'], 'skunk_029.jpg': ['skunk']}
+{'fox_squirrel_01.jpg': ['fox squirrel', 'fox squirrel, eastern fox squirrel, sciurus niger', 1], 'Boston_terrier_02285.jpg': ['boston terrier', 'boston bull, boston terrier', 1], 'Dog_02.png': ['dog', 'golden retriever', 0], 'Dog_01.png': ['dog', 'golden retriever', 0], 'Dalmatian_04017.jpg': ['dalmatian', 'dalmatian, coach dog, carriage dog', 1], 'skunk_029.jpg': ['skunk']}
+{'fox_squirrel_01.jpg': ['fox squirrel', 'fox squirrel, eastern fox squirrel, sciurus niger', 1], 'Boston_terrier_02285.jpg': ['boston terrier', 'boston bull, boston terrier', 1], 'Dog_02.png': ['dog', 'golden retriever', 0], 'Dog_01.png': ['dog', 'golden retriever', 0], 'Dalmatian_04017.jpg': ['dalmatian', 'dalmatian, coach dog, carriage dog', 1], 'skunk_029.jpg': ['skunk', 'skunk, polecat, wood pussy', 1]}
+
+     MATCH:
+
+           fox_squirrel_01.jpg: 
+Real:               fox squirrel   Classifier: fox squirrel, eastern fox squirrel, sciurus niger
+
+      Boston_terrier_02285.jpg: 
+Real:             boston terrier   Classifier:    boston bull, boston terrier
+
+           Dalmatian_04017.jpg: 
+Real:                  dalmatian   Classifier: dalmatian, coach dog, carriage dog
+
+                 skunk_029.jpg: 
+Real:                      skunk   Classifier:     skunk, polecat, wood pussy
+
+ NOT A MATCH:
+
+                    Dog_02.png: 
+Real:                        dog   Classifier:               golden retriever
+
+                    Dog_01.png: 
+Real:                        dog   Classifier:               golden retriever
+
+# Total Images 6 # Matches: 4 # NOT Matches: 2
+
+     MATCH:
+
+           fox_squirrel_01.jpg: 
+Real:               fox squirrel   Classifier: fox squirrel, eastern fox squirrel, sciurus niger  
+PetLabelDog: 0  ClassLabelDog: 0
+
+      Boston_terrier_02285.jpg: 
+Real:             boston terrier   Classifier:    boston bull, boston terrier  
+PetLabelDog: 1  ClassLabelDog: 1
+
+           Dalmatian_04017.jpg: 
+Real:                  dalmatian   Classifier: dalmatian, coach dog, carriage dog  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                 skunk_029.jpg: 
+Real:                      skunk   Classifier:     skunk, polecat, wood pussy  
+PetLabelDog: 0  ClassLabelDog: 0
+
+ NOT A MATCH:
+
+                    Dog_02.png: 
+Real:                        dog   Classifier:               golden retriever  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                    Dog_01.png: 
+Real:                        dog   Classifier:               golden retriever  
+PetLabelDog: 1  ClassLabelDog: 1
+
+# Total Images 6 # Matches: 4 # NOT Matches: 2
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  6  N Dog Images:  4  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  50.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  6  N Dog Images:  4  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  50.0
+
+
+*** Results Summary for CNN Model Architecture RESNET ***
+N Images            :   6
+N Dog Images        :   4
+N Not-Dog Images    :   2
+ 
+pct_match: 66.66666666666666
+pct_correct_dogs: 100.0
+pct_correct_notdogs: 100.0
+pct_correct_breed: 50.0
+
+INCORRECT Dog Breed Assignment:
+Real:                        dog   Classifier:               golden retriever
+Real:                        dog   Classifier:               golden retriever
+
+** Total Elapsed Runtime: 0:59:59
